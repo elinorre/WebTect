@@ -1,35 +1,35 @@
 # WebTect
 
-Проект, созданный на вдохновении одного курса по машинному обучению.
+Project inspired by a course on machine learning.
 
-## Установка и запуск
-1. Скачайте проект
-2. Находясь внутри папки, установите зависимости командой `npm install`
-3. Запустите приложение командой `npm start`
-4. Наслаждайтесь демо на `http://localhost:300` 
-5. Для завершения процесса нажмите `CTRL+C` в командной строке, из которой запущено приложение 
+## Installation
+1. Download project
+2. Inside the project folder, install all the dependencies running `npm install`
+3. Start the app running `npm start`
+4. See the demo at `http://localhost:300` 
+5. To stop the process enter `CTRL+C` in command line, from which the app was started 
 
 
-## Подробнее
+## Details
 
 ### Public
-Модели, использующиеся при детекции, хранятся в папке `models`: там есть модели для определения пола, возраста и, собственно, обнаружения самого лица. В качестве backbone используется mobilenet, основа - MTCNN. Для замены одних моделей на другие нужно внимательно проследить за именами файлов и импортами.
+The models used for detection are stored in the `models` folder: there are models for gender, age and face detection. Mobilenet is used as the backbone, the base is MTCNN. In order to replace some models with others, you should carefully watch the file names and imports.
 
 
-`index.html` - скелет демо, куда можно добавлять нужные скрипты, стили и подобное.
+`index.html` - demo skeleton, where you can add necessary scripts, styles and such.
 
 ### Src
-Папка `components` содержит основные элементы страницы: кнопка, делающая фото, сами классы камеры, галерея и так далее. Стили находятся рядом со своими элементами.
+The `components` folder contains the main elements of the page: the button that takes the photo, the camera classes themselves, the gallery and so on. Styles are located next to their elements.
 
-В папке `helpers` содержатся элементы для удобной визуализации результата: смайлики, лица, а также использование `face-api.js`. Для более глубокого знакомства рекомендуется посмотреть их содержимое.
+The `helpers` folder contains elements for convenient visualization of the result: emoticons, faces, as well as the use of `face-api.js`. For a deeper acquaintance it is recommended to look through their contents.
 
-`serviceWorker.js` - про работу с хостом и запуск приложения.
+`serviceWorker.js` - for working with the host and launching the application.
 
 
-## Дополнительно
-- для работы офлайн и увеличения скорости в файле `index.js` можно заменить `unregister()` на `register()`, подробнее тут: https://create-react-app.dev/docs/making-a-progressive-web-app/
+## Misc.
+- To work offline and increase speed in `index.js` file you can replace `unregister()` with `register()`, more details here: https://create-react-app.dev/docs/making-a-progressive-web-app/.
 
 ## TODO:
-- распознавание лиц на видео
-- скачивание фото (находится в стадии разработки)
-- кэшировать маски выражений лиц, чтобы они при выборе фото из галереи не создавались каждый раз заново
+- video face recognition
+- photo download (under development)
+- cache facial expression masks so that they are not created anew each time when selecting a photo from the gallery
